@@ -77,6 +77,12 @@ and what is it worth watching in the real world?
 
 ## 5. Book Output Template
 
+For each section below, consider whether a Mermaid diagram would make the
+structure immediately visible. The "全书框架" section almost always should be
+a diagram — it is the author's mental model, and a text-only list loses the
+relational shape. Use the recipes in SKILL.md ("Visualizing the Output") for
+syntax references.
+
 ```markdown
 ## 一句话看懂
 The book's core question and its answer in 1-2 plain sentences.
@@ -85,9 +91,61 @@ The book's core question and its answer in 1-2 plain sentences.
 One line: what was read (全书精读 / 骨架+第X、Y章精读), and source (用户提供的文件 /
 基于模型已有知识).
 
-## 全书框架
-The author's mental model as a compact structure map. Explain each concept in one
-plain line. Use a diagram only if relations matter.
+## 全书框架 (推荐用 Mermaid)
+Visualize the author's mental model. Two options:
+
+**Option A: mindmap** — when the framework is hierarchical (core concept →
+branches → sub-concepts). Best for most non-fiction books.
+
+```mermaid
+mindmap
+  root((全书核心问题))
+    大概念 1
+      子概念 1.1
+      子概念 1.2
+    大概念 2
+      子概念 2.1
+    大概念 3
+```
+
+**Option B: flowchart TB** — when the framework is a process or decision tree
+(Step A → B → C).
+
+```mermaid
+flowchart TB
+  A[前提条件] --> B[核心机制]
+  B --> C[结果1]
+  B --> D[结果2]
+  C --> E[应用]
+  D --> F[限制]
+```
+
+Follow the diagram with one plain paragraph per concept, explaining what each
+box means in one line. This keeps the output accessible even when mermaid does
+not render.
+
+**例：全书框架（mindmap + 文字说明）**
+
+```markdown
+```mermaid
+mindmap
+  root((系统思考))
+    思维模型
+      多样性模型
+      存量-流量图
+      反馈回路
+    决策陷阱
+      政策阻力
+      公地悲剧
+    杠杆点
+      数字化的变革力量
+      社会范式的突破
+```
+
+- **思维模型**：理解复杂系统需要三种基本工具
+- **决策陷阱**：常见模式错误及其识别方法
+- **杠杆点**：12 个干预点的排序，数字和范式层面的杠杆最高
+```
 
 ## 核心论点与逻辑链
 3-7 core arguments, each: 论点 -> 作者如何论证 -> 依赖的前提. Mark the load-bearing
@@ -101,6 +159,17 @@ quality note each (代表性 / 可复现性 / 时效性).
 Assumptions the book silently makes; blind spots and counterexamples; what the
 framework implies for practice; where it likely stops working. Label inference.
 
+If the chain of reasoning is multi-step, consider a flowchart:
+
+```mermaid
+flowchart LR
+  P[隐含前提] --> C[核心论点]
+  C --> Q1[问题1]
+  C --> Q2[问题2]
+  style P fill:#f8d7da
+  style Q2 fill:#fff3cd
+```
+
 ## 通俗解读 (optional, for dense books)
 The hardest 1-2 ideas re-explained with everyday analogies.
 
@@ -111,3 +180,20 @@ read next if the topic matters.
 
 Scale to the request: "快速挖框架" = 一句话看懂 + 全书框架 + 核心论点, skip the rest.
 Full 拆书 = whole template.
+
+### Visualizing the Book Output — Quick Reference
+
+| 输出章节 | 推荐图表 | 场景 |
+|---|---|---|
+| 全书框架 | mindmap / flowchart TB | 大多数非虚构书籍首选 |
+| 核心论点与逻辑链 | flowchart TB | 论证有多步或隐含前提时 |
+| 关键论据 | pie | 论据类型权重有明显差异时 |
+| 隐含启示 | quadrantChart | 需要比较利弊或各方立场时 |
+
+Always pair with explanatory text. Never rely solely on a diagram.
+
+### Example: Full Framework Visualization
+
+For a complete visual book template, see `SKILL.md` → "Visualizing the Output"
+for diagram syntax, and `references/examples.md` → "可视化版本" for a
+non-fiction book style reference.

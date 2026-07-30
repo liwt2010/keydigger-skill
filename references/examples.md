@@ -67,3 +67,58 @@ fictional. Note how inference is labeled and jargon is unpacked.
   appear throughout.
 - The 事实与观点 section explicitly names single-sourced claims.
 - Investor direction is framed as observation, not advice.
+
+## 可视化版本（Mermaid 增强）
+
+同一篇案例，两个关键位置用 Mermaid 图替代纯文本。
+
+### 核心观点（mindmap）
+
+```mermaid
+mindmap
+  root((星澜科技发布))
+    推理成本减半
+      性能持平
+      公司自述 无第三方评测
+    20亿B轮融资
+      主权基金领投
+    价格战到效率战
+      CEO立场表述
+      行业未必共识
+```
+
+1. 新模型推理成本降低 50%、性能持平（公司宣称，无第三方评测佐证）。
+2. 完成 20 亿元 B 轮融资，主权基金领投。
+3. CEO 判断行业竞争焦点从价格转向效率（观点，服务于公司叙事）。
+
+### 深层解读：利益相关者地图（quadrantChart）
+
+```mermaid
+quadrantChart
+  title 受益 vs 威胁
+  x-axis 低威胁 --> 高威胁
+  y-axis 低受益 --> 高受益
+  quadrant-1 赢家
+  quadrant-2 受冲击
+  quadrant-3 边缘
+  quadrant-4 观望
+  消费者: [0.85, 0.75]
+  开发者: [0.7, 0.65]
+  竞品_烧钱型: [0.3, 0.7]
+  云厂商: [0.3, 0.4]
+  投资者: [0.5, 0.5]
+```
+
+_(图中位置为示意，具体取决于数据验证结果)_
+
+- **赢家（高受益+低威胁）**：消费者、开发者——降价直接利好。
+- **受冲击（高受益+高威胁）**：烧钱换规模的竞品——被迫跟进则资金承压。
+- **观望（低受益+低威胁）**：云厂商——转售空间被压缩但影响可控。
+- **边缘（低受益+高威胁）**：投资者——看增长更要看毛利。
+
+## What the Visuals Add
+
+- 思维导图让 3 个核心观点及其子论据一目了然，比纯编号列表快读。
+- 四象限为"谁受益/谁承压"提供了可比较的视觉参照，读者可以一眼分辨不同角色的
+  位置关系。
+- 每个图必须配合文字版本——不怕显示失败，同时文字可回答、可引用。

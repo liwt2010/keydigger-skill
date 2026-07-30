@@ -93,7 +93,123 @@ Concrete implications or directions for the audiences this news touches
 Scale down gracefully: for a short or simple piece, merge sections rather than padding.
 Scale up for long reports: keep the skeleton, deepen each section.
 
+## Visualizing the Output
+
+Use Mermaid diagrams to make structure visible — they render natively in the app,
+GitHub, VS Code, and most Markdown viewers. Follow these rules:
+
+- **At most 1-2 diagrams per output.** Choose the section with the richest
+  structure. A diagram is a lens, not wallpaper.
+- **Always pair a diagram with its textual content.** Some environments
+  cannot render Mermaid; the text alone must still be complete.
+- **Label in the output language.** Prefer the user's language in node text.
+- **Use double-quoted Mermaid node labels** when text contains parentheses,
+  brackets, or punctuation that conflicts with Mermaid syntax.
+
+Recipe templates by section (adapt to the actual content):
+
+| 最佳图表位置 | 推荐图表类型 | 什么时候用 |
+|------|------|------|
+| 核心观点 | mindmap | 3-5 个观点之间有层级或并行关系时 |
+| 深层解读/隐含启示 | quadrantChart 或 flowchart LR | 需要展示各方博弈或多阶段传递效应时 |
+| 对不同读者的意义 | flowchart LR | 不同人群分支清晰时 |
+| 全书框架 | mindmap 或 flowchart TB | 思维模型有层级或概念间关联时 |
+| 核心论点与逻辑链 | flowchart TB | 论证有多步或隐含前提时 |
+| 时间线/为什么是现在 | timeline | 事件跨越多个时间节点时 |
+| 论据分布 | pie | 不同论据类型权重差异明显时 |
+| 各方受益/威胁 | quadrantChart | 需要快速比较多个利益相关者时 |
+
+### mindmap - 核心观点 / 全书框架
+
+```mermaid
+mindmap
+  root((文章核心))
+    观点 A
+      支撑论据 1
+      支撑论据 2
+    观点 B
+      支撑论据 3
+    观点 C
+      关键数字
+```
+
+### quadrantChart - 深层解读 / 利益相关者地图
+
+```mermaid
+quadrantChart
+  title 受益 vs 威胁
+  x-axis 低威胁 --> 高威胁
+  y-axis 低受益 --> 高受益
+  quadrant-1 赢家
+  quadrant-2 受冲击
+  quadrant-3 观望
+  quadrant-4 边缘
+  消费者: [0.8, 0.8]
+  竞品_A: [0.3, 0.7]
+  供应商: [0.6, 0.4]
+  监管: [0.2, 0.3]
+```
+
+### flowchart - 逻辑链 / 二阶效应 / 因果传递
+
+```mermaid
+flowchart LR
+  A[前提/事件] --> B[直接效应]
+  B --> C[二阶效应]
+  B --> D[其他方向]
+  C --> E[值得观察]
+  style A fill:#e3f2fd
+  style E fill:#fff3e0
+```
+
+### timeline - 事件脉络
+
+```mermaid
+timeline
+  title 事件推演
+  时间点1 : 发生了什么
+  时间点2 : 为什么在这个节点
+  时间点3 : 后续方向
+```
+
+### pie - 论据类型
+
+```mermaid
+pie title 论据类型分布
+  "数据" : 40
+  "案例研究" : 25
+  "权威引用" : 20
+  "轶事" : 15
+```
+
+### 示例：一篇科技新闻的核心观点可视化
+
+```markdown
+## 核心观点
+
+```mermaid
+mindmap
+  root((星澜科技发布))
+    推理成本减半
+      性能持平
+      公司自述 无第三方
+    20亿B轮融资
+      主权基金领投
+    价格战到效率战
+      CEO立场表述
+      行业未必共识
+```
+
+1. 新模型推理成本降低 50%、性能持平（公司宣称，无第三方评测佐证）。
+2. 完成 20 亿元 B 轮融资，主权基金领投。
+3. CEO 判断行业竞争焦点从价格转向效率（观点，服务于公司叙事）。
+```
+
+Scale down the visual treatment along with the text: one-sentence opinions need no
+mermaid; three-lens implications with named stakeholders benefit from one.
+
 ## Principles
+
 
 - **Plain language is mandatory.** If a sentence needs domain knowledge to parse,
   rewrite it. Test: would a curious high-schooler follow it?
