@@ -181,6 +181,26 @@ read next if the topic matters.
 Scale to the request: "快速挖框架" = 一句话看懂 + 全书框架 + 核心论点, skip the rest.
 Full 拆书 = whole template.
 
+
+### Emphasis — Making the Structure Scanable
+
+Book analysis is dense. Use these emphasis techniques to keep it readable:
+
+- **TL;DR callout box** for the single most important takeaway (the book's
+  answer to its core question). This is the only sentence many readers will
+  remember — make it count.
+- **Framework diagram as the hero** of the page. The mindmap or flowchart
+  should be the first thing a reader sees after the TL;DR.
+- **Bold the load-bearing claims** in the logic chain section. The sentence
+  the whole argument collapses without should stand out.
+- **Tabular evidence inventory**: use a 2-column table (论据类型 | 质量评价)
+  instead of bullets for the evidence section — it is easier to scan and
+  compare.
+- **Colored callout** for the "implied assumption" that, if true, would
+  make or break the book's thesis. Label it (e.g. ⚠️ 关键假设).
+- Use these HTML equivalents when outputting markdown:
+  `> **🔍 关键发现**` for highlights, `| 类型 | 评价 |` for tables.
+
 ### Visualizing the Book Output — Quick Reference
 
 | 输出章节 | 推荐图表 | 场景 |

@@ -205,10 +205,33 @@ mindmap
 3. CEO 判断行业竞争焦点从价格转向效率（观点，服务于公司叙事）。
 ```
 
-Scale down the visual treatment along with the text: one-sentence opinions need no
-mermaid; three-lens implications with named stakeholders benefit from one.
 
-## Principles
+### Visual Hierarchy — Highlighting What Matters
+
+The reader should grasp the most important takeaway from each section in 3 seconds.
+Use these techniques to make the signal visually distinct from the noise:
+
+| 技术 | 用法 | 效果 |
+|---|---|---|
+| Executive Summary Bar | 4 KPI 卡片放在最上方，每个卡片一个核心关键词+一行子标题 | 3 秒扫描全文梗概 |
+| TL;DR Callout Box | "一句话看懂"用悬浮色块 + 加大字重 + 关键短语用对比色 | 最核心判断一眼可见 |
+| 重点高亮 (.highlight) | 每节最重要的 1 个句子用淡黄底 + 左侧色条 + 关键词橙色 | 断句读也能抓住信号 |
+| 观点编号圈 | 核心观点用圆角编号（圈内数字），关键主语加粗 | 列表不再扁平 |
+| 推断标签 (.tag-inf) | 每条隐含启示前带彩色标签（🔵基于文中 / 🟠结合外部 / 🟢可核实事实 / 🔴待跟踪） | 读者立刻知道这句话的"可信级别" |
+| 术语对照表 | 政策术语用两列网格解释（原文→通俗说法），不打断正文 | 需要快查的人直接找 |
+| 受众四色卡片 | 不同读者群体用 4 色卡片（绿/红/紫/橙），每种颜色暗示一种立场 | 身份导向，快速定位自己的那一块 |
+| 原始文本折叠 | 原文用 `<details>` 折叠，保持输出干净但可溯源 | 验证和阅读两不误 |
+
+**规则：**
+- 每个输出至少使用 2 种层次技术（默认：TL;DR box + 推断标签系统）。
+- 不要对每一句话都加高亮——高亮的效果与使用频率成反比。
+- 颜色不能是唯一的区分方式：色盲读者和纯文本环境需要文字标签兜底。
+- 标签文字（如"基于文中信息推断""待跟踪"）必须与输出语言一致。
+- 在 HTML 输出中优先使用 class 化 CSS（tldr, highlight, insight-list, stakeholder-grid 等），
+  在 Markdown 输出中使用 emoji + 加粗 + 引用块来模拟层次。
+
+
+
 
 
 - **Plain language is mandatory.** If a sentence needs domain knowledge to parse,

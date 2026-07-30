@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Keydigger 解读：政治局会议通稿（2026.7.30）</title>
+<script src="https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.min.js"></script>
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans SC", "PingFang SC", "Microsoft YaHei", sans-serif; color: #1a1a2e; background: #f0f2f5; line-height: 1.7; }
+.container { max-width: 860px; margin: 0 auto; padding: 0 20px; }
+
+/* ─── header ─── */
+.header { background: linear-gradient(135deg, #0a0a1a 0%, #16213e 60%, #0f3460 100%); color: #fff; padding: 40px 0 36px; }
+.header h1 { font-size: 24px; font-weight: 700; letter-spacing: 0.8px; margin-bottom: 6px; }
+.header .meta { font-size: 13px; color: #7a8baa; }
+.header .meta a { color: #90b0e0; text-decoration: none; }
+.badge { display: inline-block; background: #e94560; color: #fff; font-size: 11px; font-weight: 600; padding: 3px 12px; border-radius: 4px; letter-spacing: 1px; margin-bottom: 12px; }
+
+/* ─── executive summary bar ─── */
+.exec-summary { background: #fff; border-radius: 10px; margin: -20px 0 24px; padding: 20px 24px 16px; box-shadow: 0 2px 8px rgba(0,0,0,0.08); display: flex; flex-wrap: wrap; gap: 12px; }
+.exec-item { flex: 1; min-width: 140px; padding: 8px 12px; border-radius: 6px; background: #f8f9fb; }
+.exec-item .exec-val { font-size: 18px; font-weight: 700; color: #0f3460; margin-bottom: 2px; }
+.exec-item .exec-lbl { font-size: 12px; color: #888; }
+
+/* ─── sections ─── */
+.section { background: #fff; border-radius: 10px; padding: 28px 32px; margin-bottom: 20px; box-shadow: 0 1px 3px rgba(0,0,0,0.06); }
+.section h2 { font-size: 15px; font-weight: 600; margin-bottom: 16px; padding-bottom: 8px; border-bottom: 2px solid #0f3460; display: flex; align-items: center; gap: 8px; text-transform: uppercase; letter-spacing: 1px; color: #555; }
+.section h2 .num { background: #0f3460; color: #fff; font-size: 11px; width: 20px; height: 20px; border-radius: 50%; display: inline-flex; align-items: center; justify-content: center; }
+
+/* ─── TL;DR callout ─── */
+.tldr { background: #f0f4ff; border-radius: 8px; padding: 20px 24px; margin-bottom: 16px; border-left: 4px solid #0f3460; }
+.tldr p { font-size: 18px; font-weight: 600; color: #0f3460; line-height: 1.8; margin: 0; }
+
+/* ─── body text ─── */
+.section p { font-size: 15px; margin-bottom: 12px; color: #333; }
+.section ul, .section ol { padding-left: 22px; margin-bottom: 12px; }
+.section li { font-size: 15px; margin-bottom: 6px; color: #333; }
+
+/* ─── highlight sentence ─── */
+.highlight { background: #fffde7; border-left: 3px solid #f9a825; padding: 10px 16px; margin: 14px 0; border-radius: 0 6px 6px 0; font-size: 15px; font-weight: 500; color: #333; }
+.highlight strong { color: #d84315; }
+
+/* ─── inline tags ─── */
+.tag-inf { display: inline-block; font-size: 11px; font-weight: 600; padding: 2px 8px; border-radius: 3px; margin-right: 4px; vertical-align: middle; }
+.tag-blue { background: #e3f2fd; color: #1565c0; }
+.tag-amber { background: #fff3e0; color: #e65100; }
+.tag-green { background: #e8f5e9; color: #2e7d32; }
+.tag-red { background: #fce4ec; color: #b71c1c; }
+
+/* ─── mermaid ─── */
+.mermaid-wrap { background: #fafbfc; border: 1px solid #e8eaef; border-radius: 8px; padding: 14px; margin: 16px 0; overflow-x: auto; }
+.mermaid-wrap .mermaid { display: flex; justify-content: center; }
+
+/* ─── insight cards ─── */
+.insight-list { list-style: none; padding: 0 !important; }
+.insight-list > li { background: #f8f9fb; border-left: 4px solid #0f3460; padding: 16px 18px; margin-bottom: 12px; border-radius: 0 8px 8px 0; line-height: 1.7; }
+.insight-list > li .insight-title { font-weight: 700; font-size: 15px; color: #0f3460; margin-bottom: 4px; }
+.insight-list > li .insight-body { font-size: 14px; color: #444; }
+.insight-list > li .insight-body strong { color: #d84315; }
+.insight-list > li.st-highlight { border-left-color: #e94560; }
+.insight-list > li.st-highlight .insight-title { color: #e94560; }
+
+/* ─── numbered viewpoint list ─── */
+.viewpoint-list { list-style: none; padding: 0 !important; counter-reset: vp; }
+.viewpoint-list > li { counter-increment: vp; padding: 14px 16px 14px 52px; position: relative; background: #f8f9fb; border-radius: 8px; margin-bottom: 10px; font-size: 14px; line-height: 1.7; color: #444; }
+.viewpoint-list > li::before { content: counter(vp); position: absolute; left: 14px; top: 14px; width: 26px; height: 26px; background: #0f3460; color: #fff; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 13px; font-weight: 600; }
+.viewpoint-list > li strong { color: #0f3460; }
+
+/* ─── table ─── */
+.fact-table { width: 100%; border-collapse: collapse; font-size: 14px; margin: 12px 0; }
+.fact-table th { text-align: left; background: #f0f2f5; padding: 10px 14px; font-weight: 600; font-size: 13px; color: #555; }
+.fact-table td { padding: 12px 14px; border-bottom: 1px solid #eee; vertical-align: top; line-height: 1.6; }
+.fact-table tr:last-child td { border: none; }
+
+/* ─── glossary table ─── */
+.glossary { display: grid; grid-template-columns: auto 1fr; gap: 0; font-size: 14px; margin: 12px 0; }
+.glossary-term { background: #f8f9fb; padding: 8px 14px; font-weight: 600; color: #0f3460; border-bottom: 1px solid #e0e3eb; }
+.glossary-def { padding: 8px 14px; color: #555; border-bottom: 1px solid #e0e3eb; }
+.glossary-term:last-of-type, .glossary-def:last-of-type { border-bottom: none; }
+
+/* ─── stakeholder grid ─── */
+.stake-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin: 12px 0; }
+.stake-card { padding: 16px 18px; border-radius: 8px; font-size: 13px; line-height: 1.6; }
+.stake-card h4 { font-size: 14px; font-weight: 700; margin-bottom: 6px; }
+.stake-card p { font-size: 13px; margin: 0; color: #444; }
+.st-q1 { background: #e8f5e9; border-left: 4px solid #2e7d32; }
+.st-q2 { background: #fce4ec; border-left: 4px solid #c62828; }
+.st-q3 { background: #f3e5f5; border-left: 4px solid #6a1b9a; }
+.st-q4 { background: #fff3e0; border-left: 4px solid #e65100; }
+
+/* ─── source quote ─── */
+.article-quote { background: #fff; border: 1px solid #e0e3eb; margin-bottom: 24px; padding: 18px 22px; border-radius: 8px; font-size: 14px; color: #666; }
+.article-quote summary { cursor: pointer; font-weight: 600; color: #333; margin-bottom: 6px; font-size: 13px; }
+
+/* ─── footer ─── */
+.footer { text-align: center; padding: 30px 0; font-size: 12px; color: #999; }
+.footer a { color: #0f3460; text-decoration: none; font-weight: 600; }
+
+@media (max-width: 600px) {
+  .section { padding: 20px 16px; }
+  .header h1 { font-size: 18px; }
+  .stake-grid { grid-template-columns: 1fr; }
+  .exec-summary { gap: 8px; padding: 14px 16px 10px; }
+  .exec-item { min-width: 100px; }
+  .tldr p { font-size: 16px; }
+}
+</style>
+</head>
+<body>
+
+<div class="header">
+  <div class="container">
+    <span class="badge">✦ KEYDIGGER 深度解读</span>
+    <h1>中共中央政治局召开会议 分析研究当前经济形势和经济工作</h1>
+    <div class="meta">东方财富网 · 2026年7月30日 · <a href="https://finance.eastmoney.com/a/202607303826626131.html" target="_blank">原文链接</a></div>
+  </div>
+</div>
+
+<div class="container">
+
+<!-- ═══ EXECUTIVE SUMMARY ═══ -->
+<div class="exec-summary">
+  <div class="exec-item"><div class="exec-val">📅 五中全会</div><div class="exec-lbl">10月北京·从严治党主题</div></div>
+  <div class="exec-item"><div class="exec-val">💰 政策加码</div><div class="exec-lbl">积极财政+适度宽松+增量后手</div></div>
+  <div class="exec-item"><div class="exec-val">🤖 产业重器</div><div class="exec-lbl">人工智能+行动·智能经济·未来产业</div></div>
+  <div class="exec-item"><div class="exec-val">🛡️ 风险底线</div><div class="exec-lbl">房地产稳定·化债·资本市场信心</div></div>
+</div>
+
+<div class="section">
+  <h2><span class="num">1</span>一句话看懂</h2>
+  <div class="tldr">
+    <p>经济形势"肯定成绩、正视困难"；下半年定调"更积极+更宽松+有增量后手"；同时宣布10月五中全会聚焦党建。<br>——<span style="color:#e94560;">这是一场承认压力、但手里还有牌的年中会议。</span></p>
+  </div>
+</div>
+
+<!-- ═══ 通俗解读 ═══ -->
+<div class="section">
+  <h2><span class="num">2</span>通俗解读</h2>
+  <p>这类会议通稿可以拆成<span class="tag-inf tag-blue">前半段</span>——宣布五中全会（10月、从严治党），和<span class="tag-inf tag-blue">后半段</span>——经济定调。以下是直译：</p>
+
+  <div class="glossary">
+    <div class="glossary-term">更加积极的财政政策</div><div class="glossary-def">政府多发债、快花钱，基建和补贴支出提速</div>
+    <div class="glossary-term">适度宽松的货币政策</div><div class="glossary-def">降准降息空间仍在，市场上的钱更便宜、更充裕（2008年后首次重提）</div>
+    <div class="glossary-term">逆周期调节</div><div class="glossary-def">经济冷时政府主动加热，熨平波动</div>
+    <div class="glossary-term">增量政策</div><div class="glossary-def">现有力度不够的话，还有备选工具没出——<strong>这是最重要的潜台词</strong></div>
+    <div class="glossary-term">内卷式竞争</div><div class="glossary-def">企业压价死磕，谁都不赚钱</div>
+    <div class="glossary-term">三保</div><div class="glossary-def">基层政府保工资、保运转、保基本民生</div>
+    <div class="glossary-term">两重 / 两新</div><div class="glossary-def">国家重大战略 / 重大工程；新基建 / 新型城镇化</div>
+  </div>
+
+  <div class="highlight">核心信号：<strong>十五五开局之年，政策不会"躺平"</strong>——财政加速、内需加力、产业向AI和未来产业倾斜，同时守住地产+地方债的风险底线。</div>
+</div>
+
+<!-- ═══ 核心观点 ═══ -->
+<div class="section">
+  <h2><span class="num">3</span>核心观点</h2>
+
+  <div class="mermaid-wrap">
+    <pre class="mermaid">
+mindmap
+  root((政治局7.30会议))
+    五中全会
+      10月北京
+      从严治党主题
+    经济定调
+      动能向新结构向优
+      高度重视困难挑战
+    政策工具
+      积极财政+宽松货币
+      增量政策准备
+      逆周期加力
+    产业方向
+      人工智能+行动
+      智能经济新形态
+      未来产业/新支柱
+    风险底线
+      房地产:稳定
+      化债一揽子方案
+      中小金融机构:减量提质
+      资本市场:提升韧性和信心
+    </pre>
+  </div>
+
+  <ol class="viewpoint-list">
+    <li><strong>经济形势"肯定成绩+正视困难"</strong>——前半句"动能向新、结构向优"，紧接着"高度重视经济运行中的困难挑战"。通稿措辞的张力本身就是信号。</li>
+    <li><strong>下半年政策基调是加码</strong>——"及时谋划出台务实管用的增量政策"，如果现有力度不够，<span style="color:#e94560;font-weight:600;">还有后手。</span></li>
+    <li><strong>产业重心排序变了</strong>——首次在政治局层级将"人工智能+"行动、智能经济新形态、AI治理体系放在同一段落。</li>
+    <li><strong>房地产已从"增长引擎"转为"风险变量"</strong>——出现在"安全屏障"而非"扩内需"段落，只提"稳定"二字。</li>
+    <li><strong>五中全会聚焦从严治党的安排值得注意</strong>——一般而言五中全会承担五年规划审议功能；这次聚焦党建，优先级排序的信号清楚。</li>
+  </ol>
+</div>
+
+<!-- ═══ 深层解读 ═══ -->
+<div class="section">
+  <h2><span class="num">4</span>深层解读与隐含启示</h2>
+
+  <div class="mermaid-wrap">
+    <pre class="mermaid">
+flowchart LR
+  A["积极财政+宽松货币"] --> B["扩大内需"]
+  A --> C["稳市场信心"]
+  B --> D["服务消费潜力"]
+  B --> E["六张网规划建设"]
+  B --> F["人工智能+产业"]
+  C --> G["资本市场: 韧性和信心"]
+  C --> H["房地产: 稳定"]
+  D --> I["增量政策: 视数据出台"]
+  E --> J["关注三季度经济数据"]
+  style I fill:#fff3e0,stroke:#e65100
+  style J fill:#e3f2fd,stroke:#1565c0
+    </pre>
+  </div>
+
+  <ul class="insight-list">
+    <li class="st-highlight">
+      <div class="insight-title"><span class="tag-inf tag-amber">最关键的潜台词</span> "增量政策"是下半年最大的变量</div>
+      <div class="insight-body">"及时谋划出台"说明还没出，但已在案头。<strong>三季度的经济数据</strong>将决定增量政策的方向和力度。若PMI、社零、就业走弱，大概率有新一轮消费补贴、降准降息或专项债加速。</div>
+    </li>
+    <li>
+      <div class="insight-title"><span class="tag-inf tag-blue">基于文中信息推断</span> 房地产归入"安全屏障"</div>
+      <div class="insight-body">只出现在"安全屏障"段落，与化债、中小金融机构改革并列，确认其框架已从<span style="color:#e94560;">稳增长→防风险</span>。期待大刺激的可能性不高。</div>
+    </li>
+    <li>
+      <div class="insight-title"><span class="tag-inf tag-amber">结合外部背景推测</span> "灵活就业"被独立成句</div>
+      <div class="insight-body">"灵活就业人员和新就业形态人员权益保障"被单独点名，对应外卖、网约车、直播行业从业人员膨胀。这是<strong>民生托底</strong>，也侧面反映正规就业岗位的结构性压力。</div>
+    </li>
+    <li>
+      <div class="insight-title"><span class="tag-inf tag-blue">基于文中信息推断</span> 资本市场"提升韧性和信心"是直接喊话</div>
+      <div class="insight-body">信号明确，结合"深化资本市场投融资综合改革"，后续可能有交易端或公司治理方面的制度性改革出台。</div>
+    </li>
+  </ul>
+</div>
+
+<!-- ═══ 事实与观点 ═══ -->
+<div class="section">
+  <h2><span class="num">5</span>事实与观点</h2>
+
+  <table class="fact-table">
+    <tr><th>分类</th><th>内容</th><th>可信度</th></tr>
+    <tr>
+      <td><span class="tag-inf tag-green">可核实事实</span></td>
+      <td>7月30日开会；决定10月开五中全会；政策基调"积极财政+适度宽松货币"</td>
+      <td>✅ 可交叉验证</td>
+    </tr>
+    <tr>
+      <td><span class="tag-inf tag-blue">官方定性</span></td>
+      <td>"动能向新、结构向优"；"高度重视困难挑战"——这是官方判断，非独立验证结论</td>
+      <td>⚠️ 单向度信源</td>
+    </tr>
+    <tr>
+      <td><span class="tag-inf tag-amber">措辞即信号</span></td>
+      <td>"积极""宽松""增量""稳定"的保留/增减是分析核心方法。上文"深层解读"均基于此推断</td>
+      <td>🔍 基于文本分析</td>
+    </tr>
+    <tr>
+      <td><span class="tag-inf tag-red">待续跟踪</span></td>
+      <td>实际增量政策内容、财政支出规模、货币政策执行细则均未公布</td>
+      <td>⏳ 需三季度数据验证</td>
+    </tr>
+  </table>
+</div>
+
+<!-- ═══ 对不同读者 ═══ -->
+<div class="section">
+  <h2><span class="num">6</span>对不同读者的意义</h2>
+
+  <div class="stake-grid">
+    <div class="stake-card st-q1">
+      <h4>📈 投资者</h4>
+      <p>关注三季度经济数据 + 增量政策组合拳。<br>人工智能+、服务消费是主线。<br>房地产链维持"稳而不刺激"预期。</p>
+      <p style="margin-top:6px;font-size:11px;color:#999;">方向性观察，不构成投资建议</p>
+    </div>
+    <div class="stake-card st-q4">
+      <h4>🏭 企业经营者</h4>
+      <p>账款拖欠"常态化解决"和内卷整治若落地，下游供应商和消费品企业受益。</p>
+      <p>平台经济措辞从严管→规范健康发展，信号趋稳。</p>
+    </div>
+    <div class="stake-card st-q2">
+      <h4>🏡 普通读者</h4>
+      <p>就业、民生（一老一小）、灵活就业权益是下半年的确定性投入。</p>
+      <p>大宗消费可等待后续增量补贴政策。</p>
+    </div>
+    <div class="stake-card st-q3">
+      <h4>🌐 从业者/开发者</h4>
+      <p>"人工智能+"行动和"智能经济"被提升到政治局层级。</p>
+      <p>相关产业扶持政策和基础设施投资将加速。</p>
+    </div>
+  </div>
+</div>
+
+</div><!-- /container -->
+
+<div class="footer">
+  由 <a href="https://github.com/liwt2010/keydigger-skill" target="_blank">Keydigger</a> 技能生成 ·
+  解读基于公开信息，结论为方向性推断，不构成任何建议
+</div>
+
+<script>mermaid.initialize({startOnLoad:true,theme:"neutral",fontFamily:"-apple-system,BlinkMacSystemFont,Noto Sans SC,sans-serif",themeVariables:{fontSize:"14px"}});</script>
+</body>
+</html>
