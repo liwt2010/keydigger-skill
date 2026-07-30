@@ -1,0 +1,4 @@
+interface:
+  display_name: "Keydigger"
+  short_description: "把新闻和文章解读成通俗易懂的形式，挖出核心观点与隐含启示"
+  default_prompt: "Use $keydigger to 解读这篇内容：<粘贴链接、文章正文或截图>"
