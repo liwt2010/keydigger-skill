@@ -10,7 +10,7 @@ Keydigger 是一个面向 Agent（Codex / Claude Code / Cursor 等）的解读�
 
 | 输入 | 解读模式 | 输出 |
 |------|----------|------|
-| 新闻链接 / URL | 短篇模板 | 一句话看懂 + 通俗解读 + 核心观点 + 深层解读与隐含启示 + 事实与观点 + 对不同读者的意义 |
+| 新闻链接 / URL | 短篇模板 | 一句话看懂 + 通俗解读 + 历史脉络与新变化 + 核心观点 + 深层解读与隐含启示 + 事实与观点 + 对不同读者的意义 |
 | 文章正文 / 截图 | 同上 | 同上 |
 | PDF / DOCX | 同上 | 同上 |
 | 书籍 (EPUB / TXT / MD) | 长文模板 | 全书框架 + 核心论点与逻辑链 + 关键论据 + 隐含启示与批判性思考 |
@@ -22,14 +22,14 @@ Keydigger 是一个面向 Agent（Codex / Claude Code / Cursor 等）的解读�
 
 ```bash
 # Codex（推荐）
-git clone https://github.com/<你的用户名>/keydigger-skill.git ~/.codex/skills/keydigger
+git clone https://github.com/liwt2010/keydigger-skill.git ~/.codex/skills/keydigger
 
 # Claude Code
-git clone https://github.com/<你的用户名>/keydigger-skill.git ~/.claude/skills/keydigger
+git clone https://github.com/liwt2010/keydigger-skill.git ~/.claude/skills/keydigger
 
 # 手动
-git clone https://github.com/<你的用户名>/keydigger-skill.git
-# 然后软链到 ~/.codex/skills/keydigger
+git clone https://github.com/liwt2010/keydigger-skill.git
+# 然后软链或复制到 ~/.codex/skills/keydigger
 ```
 
 ## 使用方式

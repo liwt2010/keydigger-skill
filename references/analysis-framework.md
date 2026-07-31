@@ -4,11 +4,64 @@ The digging toolkit for step 3 of the workflow. Use it to move from "what the ar
 says" to "what the article means and implies."
 
 Contents:
+0. Historical context and what changed (mandatory for news/policy)
 1. Finding the core viewpoints
 2. Six lenses for hidden implications
 3. Domain-specific angles
 4. Calibration and confidence
 5. Fact / opinion / speculation checklist
+
+## 0. Historical Context and What Changed (News & Policy Analysis)
+
+For news reports and policy articles, one step comes before the lenses: place the
+current piece in its own history. A statement means little until you know what it
+replaces. Always do this for recurring topics — policy meetings, market cycles,
+company updates, industry milestones.
+
+### Step A: Reconstruct the history
+
+Summarize what is known about the issue before this article: prior statements,
+events, policies, numbers, and outcomes. Sources in priority order:
+
+- Earlier articles or materials the user provided in this conversation.
+- Official archives and the outlet's own prior coverage (use a search tool when
+  available; do not browse blindly — one focused query for the specific issue).
+- Your own knowledge of the topic — and label it as such (基于既有知识).
+
+If you genuinely do not know the history, say so honestly: do not invent a timeline.
+Two well-documented prior data points beat a plausible but fabricated trend.
+
+### Step B: Compare against the history
+
+Build a delta table: 维度 | 过往情况 | 本次情况 | 变化. Check at least these
+dimensions:
+
+- **措辞变化**: New terms that appear (e.g. "破除内卷", "增量政策"); familiar terms
+  that disappear. Each is a deliberate choice.
+- **排序变化**: What moved up or down the list — priority shifts are policy signals.
+- **数字变化**: Targets, tools, amounts, deadlines. Exact numbers matter (e.g. 8000亿,
+  降息10bp).
+- **时间变化**: Timing and duration — earlier or later than usual, extended or cut
+  short.
+- **主体变化**: Who is involved, who is addressed, who is missing.
+- **基调变化**: 稳中求进 vs 持续发力适时加力; defensive vs offensive framing.
+- **新增/删除**: Policy items added or dropped outright.
+
+### Step C: State the deltas
+
+The output of this step is a short "本次新变化" list: 2-4 concrete differences with
+their likely meaning. Continuity is also a finding — "与去年表述基本一致" tells the
+reader the policy is holding course. Put this in the output's 历史脉络与新变化 section.
+
+Example (from this skill's own tests):
+
+| 维度 | 2025-07 党外座谈会 | 2026-07 政治局会议 | 变化 |
+|---|---|---|---|
+| 政策基调 | 保持连续性稳定性，增强灵活性预见性 | 更加积极 + 适度宽松 + 及时谋划增量政策 | 从"连续性"转向"加码" |
+| 核心任务 | 四个稳 + 破除内卷 | 扩大内需 + 人工智能+ + 防风险 | 科技产业权重上升 |
+| 新提法 | 数据要素统一大市场 | 智能经济新形态、人工智能治理体系 | 新增长极明确 |
+
+_(基于本技能对话中两篇通稿的对比；对外输出时应标注历史信息来源)_
 
 ## 1. Finding the Core Viewpoints
 

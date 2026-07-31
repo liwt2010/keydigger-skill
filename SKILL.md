@@ -39,7 +39,17 @@ Identify: What happened? Who is involved? What is the author trying to convince 
 reader of? Note genre (news report, opinion piece, press release, research, rumor) —
 genre changes how much trust the claims deserve.
 
-### 3. Dig for viewpoints and implications
+### 3. Compare against history (news & policy)
+
+For news and policy articles, place the piece in its own history BEFORE digging:
+summarize how this issue evolved (previous statements, events, numbers), then
+compare, then list what is NEW. Follow section 0 of
+`references/analysis-framework.md` — the delta checklist covers wording, ordering,
+numbers, timing, actors, tone, and added/dropped items. Label historical sources
+(官方档案 / 既有知识 / 本对话前文). If the history is unknown, say so; never invent
+a timeline.
+
+### 4. Dig for viewpoints and implications
 
 **Books and long documents**: use `references/book-analysis.md` instead — it covers
 coverage planning (what to read fully vs. sample), framework extraction, argument
@@ -52,7 +62,7 @@ implications are the heart of this skill — never skip them, but always label t
 inference, not fact. For calibration, `references/examples.md` shows a complete model
 interpretation.
 
-### 4. Write the interpretation
+### 5. Write the interpretation
 
 Use the output format below. Write in the user's language (default: the language of
 their request, otherwise the language of the source).
@@ -71,6 +81,12 @@ Default structure (adapt section names to the output language):
 Plain-language retelling: background a layperson needs, then what the article is
 actually saying. Explain every technical term in one line; use a concrete analogy
 when it helps. Assume a smart reader outside the field.
+
+## 历史脉络与新变化 (news & policy only)
+2-3 lines summarizing the issue's history (labeled: 官方档案 / 既有知识 / 本对话前文),
+then a comparison table 维度 | 过往 | 本次 | 变化, then the 2-4 concrete deltas:
+new wording, reordering, new numbers, dropped items, and what each likely means.
+Continuity is also a finding ("与上次表述基本一致").
 
 ## 核心观点
 Numbered list of the 2-5 viewpoints the article really rests on, each with one line
@@ -243,6 +259,8 @@ Use these techniques to make the signal visually distinct from the noise:
   When outside context genuinely helps (background, a trend), flag it as external.
 - **No fake certainty.** Use confidence language: 可能 / 大概率 / 值得观察. A wrong
   prediction stated confidently is worse than no prediction.
+- **History first for news and policy.** A statement only means something relative to
+  what it replaces. Without a baseline, "新变化" claims are unfounded.
 - **Respect paywalls and gaps.** Partial content = partial interpretation, stated
   upfront.
 - **Keep the user's stake in mind.** If the user says who they are (investor,

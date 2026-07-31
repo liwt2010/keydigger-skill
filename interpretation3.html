@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Keydigger 解读：党外人士座谈会（2025.7.30）</title>
+<script src="https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.min.js"></script>
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans SC", "PingFang SC", "Microsoft YaHei", sans-serif; color: #1a1a2e; background: #f0f2f5; line-height: 1.7; }
+.container { max-width: 860px; margin: 0 auto; padding: 0 20px; }
+.header { background: linear-gradient(135deg, #0d2818 0%, #14532d 55%, #15803d 100%); color: #fff; padding: 40px 0 36px; }
+.header h1 { font-size: 21px; font-weight: 700; letter-spacing: 0.8px; margin-bottom: 6px; }
+.header .meta { font-size: 13px; color: #a7d7b0; }
+.header .meta a { color: #c6e8cd; text-decoration: none; }
+.badge { display: inline-block; background: #f59e0b; color: #1e293b; font-size: 11px; font-weight: 700; padding: 3px 12px; border-radius: 4px; letter-spacing: 1px; margin-bottom: 12px; }
+.exec-summary { background: #fff; border-radius: 10px; margin: -20px 0 24px; padding: 20px 24px 16px; box-shadow: 0 2px 8px rgba(0,0,0,0.08); display: flex; flex-wrap: wrap; gap: 12px; }
+.exec-item { flex: 1; min-width: 140px; padding: 8px 12px; border-radius: 6px; background: #f8f9fb; }
+.exec-item .exec-val { font-size: 17px; font-weight: 700; color: #14532d; margin-bottom: 2px; }
+.exec-item .exec-lbl { font-size: 12px; color: #888; }
+.section { background: #fff; border-radius: 10px; padding: 28px 32px; margin-bottom: 20px; box-shadow: 0 1px 3px rgba(0,0,0,0.06); }
+.section h2 { font-size: 15px; font-weight: 600; margin-bottom: 16px; padding-bottom: 8px; border-bottom: 2px solid #14532d; display: flex; align-items: center; gap: 8px; text-transform: uppercase; letter-spacing: 1px; color: #555; }
+.section h2 .num { background: #14532d; color: #fff; font-size: 11px; width: 20px; height: 20px; border-radius: 50%; display: inline-flex; align-items: center; justify-content: center; }
+.tldr { background: #f0fdf4; border-radius: 8px; padding: 20px 24px; margin-bottom: 16px; border-left: 4px solid #15803d; }
+.tldr p { font-size: 17px; font-weight: 600; color: #14532d; line-height: 1.8; margin: 0; }
+.tldr .em { color: #b91c1c; }
+.section p { font-size: 15px; margin-bottom: 12px; color: #333; }
+.section ul, .section ol { padding-left: 22px; margin-bottom: 12px; }
+.section li { font-size: 15px; margin-bottom: 6px; color: #333; }
+.highlight { background: #fffde7; border-left: 3px solid #f9a825; padding: 10px 16px; margin: 14px 0; border-radius: 0 6px 6px 0; font-size: 15px; font-weight: 500; color: #333; }
+.highlight strong { color: #b91c1c; }
+.genretip { background: #fce4ec; padding: 12px 16px; border-radius: 6px; margin: 12px 0; font-size: 14px; color: #666; border-left: 3px solid #c62828; }
+.genretip strong { color: #c62828; }
+.tag-inf { display: inline-block; font-size: 11px; font-weight: 600; padding: 2px 8px; border-radius: 3px; margin-right: 4px; vertical-align: middle; }
+.tag-blue { background: #e3f2fd; color: #1565c0; }
+.tag-amber { background: #fff3e0; color: #e65100; }
+.tag-green { background: #e8f5e9; color: #2e7d32; }
+.tag-red { background: #fce4ec; color: #b71c1c; }
+.mermaid-wrap { background: #fafbfc; border: 1px solid #e8eaef; border-radius: 8px; padding: 14px; margin: 16px 0; overflow-x: auto; }
+.mermaid-wrap .mermaid { display: flex; justify-content: center; }
+.insight-list { list-style: none; padding: 0 !important; }
+.insight-list > li { background: #f8f9fb; border-left: 4px solid #15803d; padding: 16px 18px; margin-bottom: 12px; border-radius: 0 8px 8px 0; line-height: 1.7; }
+.insight-list > li .insight-title { font-weight: 700; font-size: 15px; color: #14532d; margin-bottom: 4px; }
+.insight-list > li .insight-body { font-size: 14px; color: #444; }
+.insight-list > li .insight-body strong { color: #b91c1c; }
+.insight-list > li.st-highlight { border-left-color: #b91c1c; }
+.insight-list > li.st-highlight .insight-title { color: #b91c1c; }
+.viewpoint-list { list-style: none; padding: 0 !important; counter-reset: vp; }
+.viewpoint-list > li { counter-increment: vp; padding: 14px 16px 14px 52px; position: relative; background: #f8f9fb; border-radius: 8px; margin-bottom: 10px; font-size: 14px; line-height: 1.7; color: #444; }
+.viewpoint-list > li::before { content: counter(vp); position: absolute; left: 14px; top: 14px; width: 26px; height: 26px; background: #14532d; color: #fff; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 13px; font-weight: 600; }
+.viewpoint-list > li strong { color: #14532d; }
+.fact-table { width: 100%; border-collapse: collapse; font-size: 14px; margin: 12px 0; }
+.fact-table th { text-align: left; background: #f0f2f5; padding: 10px 14px; font-weight: 600; font-size: 13px; color: #555; }
+.fact-table td { padding: 12px 14px; border-bottom: 1px solid #eee; vertical-align: top; line-height: 1.6; }
+.fact-table tr:last-child td { border: none; }
+.compare-table { width: 100%; border-collapse: collapse; font-size: 13px; margin: 12px 0; }
+.compare-table th { text-align: left; background: #f0fdf4; padding: 8px 10px; font-weight: 600; font-size: 12px; color: #14532d; }
+.compare-table td { padding: 10px; border-bottom: 1px solid #eee; vertical-align: top; line-height: 1.6; }
+.compare-table .delta { color: #b91c1c; font-weight: 600; }
+.stake-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin: 12px 0; }
+.stake-card { padding: 16px 18px; border-radius: 8px; font-size: 13px; line-height: 1.6; }
+.stake-card h4 { font-size: 14px; font-weight: 700; margin-bottom: 6px; }
+.stake-card p { font-size: 13px; margin: 0; color: #444; }
+.st-q1 { background: #e8f5e9; border-left: 4px solid #2e7d32; }
+.st-q2 { background: #fce4ec; border-left: 4px solid #c62828; }
+.st-q3 { background: #f3e5f5; border-left: 4px solid #6a1b9a; }
+.st-q4 { background: #fff3e0; border-left: 4px solid #e65100; }
+.article-quote { background: #fff; border: 1px solid #e0e3eb; margin-bottom: 24px; padding: 18px 22px; border-radius: 8px; font-size: 14px; color: #666; }
+.article-quote summary { cursor: pointer; font-weight: 600; color: #333; margin-bottom: 6px; font-size: 13px; }
+.footer { text-align: center; padding: 30px 0; font-size: 12px; color: #999; }
+.footer a { color: #15803d; text-decoration: none; font-weight: 600; }
+@media (max-width: 600px) {
+  .section { padding: 20px 16px; }
+  .header h1 { font-size: 17px; }
+  .stake-grid { grid-template-columns: 1fr; }
+  .exec-summary { gap: 8px; padding: 14px 16px 10px; }
+  .exec-item { min-width: 100px; }
+  .tldr p { font-size: 15px; }
+}
+</style>
+</head>
+<body>
+
+<div class="header">
+  <div class="container">
+    <span class="badge">✦ KEYDIGGER 深度解读</span>
+    <h1>就当前经济形势和下半年经济工作 中共中央召开党外人士座谈会 习近平主持并发表重要讲话</h1>
+    <div class="meta">中国政府网转载新华社 · 2025年7月30日 · <a href="https://www.gov.cn/yaowen/liebiao/202507/content_7034467.htm" target="_blank">原文链接</a></div>
+  </div>
+</div>
+
+<div class="container">
+
+<div class="exec-summary">
+  <div class="exec-item"><div class="exec-val">🎯 四个稳</div><div class="exec-lbl">稳就业 · 稳企业 · 稳市场 · 稳预期</div></div>
+  <div class="exec-item"><div class="exec-val">🔄 破除内卷</div><div class="exec-lbl">提振消费 + 畅通内循环</div></div>
+  <div class="exec-item"><div class="exec-val">📈 持续发力适时加力</div><div class="exec-lbl">宏观政策基调</div></div>
+  <div class="exec-item"><div class="exec-val">🏁 十四五圆满收官</div><div class="exec-lbl">2025年的核心时间坐标</div></div>
+</div>
+
+<div class="article-quote">
+  <details>
+    <summary>📄 原文摘要（新华社通稿）</summary>
+    <p>7月23日，中共中央在中南海召开党外人士座谈会，就当前经济形势和下半年经济工作听取各民主党派中央、全国工商联负责人和无党派人士代表的意见建议。习近平主持座谈会并发表重要讲话强调：做好下半年经济工作，要坚持稳中求进工作总基调……着力稳就业、稳企业、稳市场、稳预期，有力提振消费、破除"内卷"，畅通国内大循环，促进国内国际双循环，努力完成全年经济社会发展目标任务，实现"十四五"圆满收官。</p>
+    <p>李强受中共中央委托通报了上半年经济工作有关情况。各民主党派负责人就推动科技创新和产业创新跨区域协同、促进文体旅商融合发展、促进服务业消费、超前布局有关未来产业、加快建设数据要素统一大市场、推进高质量城市更新、进一步激发民营企业活力、加强灵活就业群体社会保障等提出意见和建议。</p>
+    <p>习近平强调，当前我国经济运行依然面临不少风险挑战……下半年，要在宏观政策上持续发力、适时加力，重点做好全方位扩大内需、坚定不移深化改革扩大开放、推动科技创新和产业创新深度融合发展、持续防范化解重点领域风险、多措并举保障改善民生等工作。</p>
+  </details>
+</div>
+
+<div class="section">
+  <h2><span class="num">1</span>一句话看懂</h2>
+  <div class="tldr">
+    <p>中央在政治局会议之前先开"听取意见会"：下半年主基调是<span class="em">稳就业、稳企业、稳市场、稳预期</span>，罕见地把"破除内卷"写进顶层政策表述——宏观政策"持续发力、适时加力"，为增量政策预留了空间。</p>
+  </div>
+  <div class="genretip"><strong>⚠️ 体裁说明：</strong>这是一篇新华社官方通稿，代表中央对外发布的信息口径。它既是新闻，也是政策信号的载体——重点看措辞、排序和"谁提了什么建议"。</div>
+</div>
+
+<div class="section">
+  <h2><span class="num">2</span>历史脉络与新变化</h2>
+  <p><span class="tag-inf tag-amber">历史来源：既有知识</span> 党外人士座谈会是每年 7 月的固定政策程序，先于政治局会议召开。2024 年 7 月政治局会议曾提出"宏观政策持续用力、更加给力"；2024 年 9 月政治局会议罕见加开经济专题会议并推出增量政策；2024 年 12 月中央经济工作会议将货币政策定调为"适度宽松"（14 年来首次），并首次提出"综合整治内卷式竞争"。</p>
+
+  <table class="compare-table">
+    <tr><th style="width:22%">维度</th><th style="width:30%">过往（2024-2025 上半年）</th><th style="width:30%">本次（2025-07 座谈会）</th><th>新变化</th></tr>
+    <tr>
+      <td><strong>政策基调</strong></td>
+      <td>"持续用力、更加给力"</td>
+      <td>"保持连续性稳定性，增强灵活性预见性"；"持续发力、适时加力"</td>
+      <td class="delta">从"更加给力"转为"适时加力"——为增量政策留出节奏变量</td>
+    </tr>
+    <tr>
+      <td><strong>核心任务</strong></td>
+      <td>扩大内需、新旧动能转换、风险防范</td>
+      <td>全方位扩大内需 + 科技创新产业创新融合 + 防范化解重点领域风险</td>
+      <td class="delta">"科技创新与产业创新深度融合发展"被提为并列重点</td>
+    </tr>
+    <tr>
+      <td><strong>反内卷</strong></td>
+      <td>2024 年 12 月首提"综合整治内卷式竞争"</td>
+      <td>"有力提振消费、破除内卷"</td>
+      <td class="delta">从"综合整治"升格为顶层任务，与提振消费并列</td>
+    </tr>
+    <tr>
+      <td><strong>就业表述</strong></td>
+      <td>"稳就业"</td>
+      <td>"四个稳"（就业/企业/市场/预期）</td>
+      <td class="delta">"稳企业""稳市场""稳预期"进入主基调，预期管理权重上升</td>
+    </tr>
+    <tr>
+      <td><strong>新方向</strong></td>
+      <td>数据要素市场建设持续推进</td>
+      <td>党外建议点名"数据要素统一大市场"、未来产业、城市更新</td>
+      <td class="delta">数据要素、未来产业进入政策候选清单</td>
+    </tr>
+    <tr>
+      <td><strong>时间坐标</strong></td>
+      <td>"十四五"关键之年</td>
+      <td>"十四五"圆满收官</td>
+      <td class="delta">从"关键之年"变为"收官之年"，目标约束更强</td>
+    </tr>
+  </table>
+
+  <div class="highlight">最值得盯的增量信号：<strong>"适时加力"四个字</strong>——与 2024 年"更加给力"的确定性表述不同，这次把加码的时点留给数据：三季度数据若走弱，增量政策（财政、货币）就会加速落地。</div>
+
+  <p style="font-size:12px;color:#999;">对照提示：本对话前文已解读过 2026-07 政治局会议通稿，其中"更加积极+适度宽松+及时谋划增量政策+人工智能+"等表述可与此篇形成跨年对照——两年都是 7 月定调，但科技产业权重明显上升。</p>
+</div>
+
+<div class="section">
+  <h2><span class="num">3</span>核心观点</h2>
+
+  <div class="mermaid-wrap">
+    <pre class="mermaid">
+mindmap
+  root((党外人士座谈会))
+    政策基调
+      稳中求进
+      四个稳: 就业企业市场预期
+      持续发力适时加力
+    重点任务
+      全方位扩大内需
+      深化改革扩大开放
+      科技创新产业创新融合
+      防范化解重点领域风险
+      保障改善民生
+    党外建议
+      未来产业
+      数据要素统一大市场
+      城市更新
+      民营企业活力
+      灵活就业社会保障
+      服务业消费
+    时间坐标
+      十四五圆满收官
+    </pre>
+  </div>
+
+  <ol class="viewpoint-list">
+    <li><strong>下半年定调"稳中求进"，四个"稳"是核心关键词</strong>——稳就业、稳企业、稳市场、稳预期，其中"稳预期"排在最后，是其余三个的前提。</li>
+    <li><strong>"破除内卷"被写进最高层经济表述</strong>——与提振消费并列，说明政策层已把"价格战/无序竞争"视为需要主动治理的问题。</li>
+    <li><strong>宏观政策"持续发力、适时加力"</strong>——"适时加力"是留白，为后续增量政策预留操作空间。</li>
+    <li><strong>党外人士的建议清单本身就是政策预告</strong>——未来产业、数据要素统一大市场、城市更新、民营经济、灵活就业社保，几乎就是此后政策文件的目录。</li>
+    <li><strong>一切服务于"十四五"圆满收官</strong>——2025 年是收官之年，经济目标带有明确的五年坐标约束。</li>
+  </ol>
+</div>
+
+<div class="section">
+  <h2><span class="num">4</span>深层解读</h2>
+
+  <ul class="insight-list">
+    <li>
+      <div class="insight-title"><span class="tag-inf tag-amber">最关键信号</span> "适时加力" = 政策工具箱还有后手</div>
+      <div class="insight-body">先"持续发力"（存量政策不撤），再"适时加力"（增量政策待命）。对比 2024 年"更加给力"的确定性表述，2025 年把节奏变成变量——如果三季度数据不理想，财政货币加码大概率加速。</div>
+    </li>
+    <li>
+      <div class="insight-title"><span class="tag-inf tag-blue">基于文中信息推断</span> 座谈会是"政策预告片"机制</div>
+      <div class="insight-body">党外人士座谈会先于政治局会议召开（7月23日 → 7月30日），中央先听意见再定调。党外建议中被采纳的条目（数据要素、未来产业、城市更新等）大概率会在随后正式文件中出现。</div>
+    </li>
+    <li>
+      <div class="insight-title"><span class="tag-inf tag-amber">结合外部背景推测</span> "四个稳"暗示当时的主要矛盾</div>
+      <div class="insight-body">"稳企业"和"稳预期"是新增提法，对应企业信心和价格预期偏弱。放在"破除内卷"旁边读，政策层已经看到价格竞争对微观主体的挤压，并决定出手治理。</div>
+    </li>
+    <li>
+      <div class="insight-title"><span class="tag-inf tag-blue">基于文中信息推断</span> 数据要素统一大市场是增量政策新方向</div>
+      <div class="insight-body">党外建议专门点名"数据要素统一大市场"，与全国统一大市场政策一脉相承但指向数据——结合各地数据交易所建设，政策下一步可能重点打通数据要素流通和定价。</div>
+    </li>
+    <li>
+      <div class="insight-title"><span class="tag-inf tag-amber">结合外部背景推测</span> 灵活就业社会保障是就业压力的影子</div>
+      <div class="insight-body">灵活就业群体社保被列为党外建议，和"稳就业"互相印证。新就业形态从业者规模持续扩大，社保覆盖不足成为显性问题——这是民生托底，也暗示正规就业吸纳能力有限。</div>
+    </li>
+  </ul>
+</div>
+
+<div class="section">
+  <h2><span class="num">5</span>事实与观点</h2>
+
+  <table class="fact-table">
+    <tr><th style="width:28%">分类</th><th style="width:42%">内容</th><th>可信度</th></tr>
+    <tr>
+      <td><span class="tag-inf tag-green">可核实事实</span></td>
+      <td>座谈会于7月23日召开；参会人员名单；习近平主持并发表讲话；李强通报情况</td>
+      <td>✅ 官方通稿，可交叉验证</td>
+    </tr>
+    <tr>
+      <td><span class="tag-inf tag-blue">政策表述</span></td>
+      <td>"四个稳""破除内卷""持续发力、适时加力"——官方措辞，具体政策工具未公布</td>
+      <td>🔍 文本信号明确</td>
+    </tr>
+    <tr>
+      <td><span class="tag-inf tag-amber">历史对比</span></td>
+      <td>2024-07/2024-12 的表述来自既有知识，已标注；党外建议=政策预告属于推断</td>
+      <td>⚠️ 需后续政策文件验证</td>
+    </tr>
+  </table>
+
+  <div class="highlight">阅读提示：<strong>这是一篇2025年7月的通稿</strong>（URL 中 202507 标注）。它与 2026 年 7 月的政治局会议通稿属于同一政策周期不同年份，可对照阅读，但政策环境已发生变化。</div>
+</div>
+
+<div class="section">
+  <h2><span class="num">6</span>对不同读者的意义</h2>
+
+  <div class="stake-grid">
+    <div class="stake-card st-q1">
+      <h4>📈 投资者</h4>
+      <p>"适时加力"意味着增量政策窗口打开，关注三季度数据发布后的政策落地节奏。数据要素、未来产业是重点观察方向。</p>
+      <p style="margin-top:6px;font-size:11px;color:#999;">方向性观察，不构成投资建议</p>
+    </div>
+    <div class="stake-card st-q4">
+      <h4>🏭 企业经营者</h4>
+      <p>"破除内卷"和"稳企业"对微观主体是积极信号。若治理低价竞争的政策落地，利润率有望修复；民营企业活力被专门点名。</p>
+    </div>
+    <div class="stake-card st-q2">
+      <h4>🏡 普通读者</h4>
+      <p>就业、民生（一老一小）、灵活就业社保是确定性投入方向。大宗消费可等待后续补贴政策。</p>
+    </div>
+    <div class="stake-card st-q3">
+      <h4>🌐 从业者/开发者</h4>
+      <p>数据要素统一大市场若提速，数据交易、数据合规、隐私计算等赛道会迎来政策红利。</p>
+    </div>
+  </div>
+</div>
+
+</div>
+
+<div class="footer">
+  由 <a href="https://github.com/liwt2010/keydigger-skill" target="_blank">Keydigger</a> 技能生成 ·
+  解读基于公开信息，历史对比已标注来源，结论为方向性推断，不构成任何建议
+</div>
+
+<script>mermaid.initialize({startOnLoad:true,theme:"neutral",fontFamily:"-apple-system,BlinkMacSystemFont,Noto Sans SC,sans-serif",themeVariables:{fontSize:"14px"}});</script>
+</body>
+</html>
